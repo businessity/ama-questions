@@ -48,7 +48,8 @@ if ($db->userExists($email, "businessity_ama")) {
     $db->getConnection()->beginTransaction();
     $db->insertUser("businessity_ama", $details);
         // Send SMS
-        $notify->viaSMS("Businessity", "Dear {$name}, thank you for sending in your question. You will be reached via SMS with further details about the Live Session. Thank you.", $phone);
+        $notify->viaSMS("Businessity", "Dear {$name}, thank you for sending in your question. You will be reached via SMS with further details about the Live Session. Thank you.
+        - Businessity Team", $phone);
 
         $db->getConnection()->commit();
 
