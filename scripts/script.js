@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', e => {
           }
         })
         .catch(error => {
-          console.log('The Request Failed', error)
+          console.log('The Request has Failed', error)
         })
     }
   })
