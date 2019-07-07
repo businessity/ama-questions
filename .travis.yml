@@ -4,4 +4,4 @@ script:
 - echo "skipping tests"
 
 after_success:
-   - lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.awlo.org; set ssl:verify-certificate no; mirror -R ~/clone/ /public_html/test"
+'find public -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://awlo.org/test{} ";"'
