@@ -5,4 +5,4 @@ script:
 
 
 after_success:
-- curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T ftp://awlo.org/test
+"curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://awlo.org/test/{}"
