@@ -2,3 +2,6 @@ language: php
 
 script:
 - echo "skipping tests"
+
+after_success:
+   - curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD awlo.org/test/{}
